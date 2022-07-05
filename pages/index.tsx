@@ -6,7 +6,7 @@ import DownloadFile from "../components/DownloadFile";
 import EmailForm from "../components/EmailForm";
 
 export default function Home() {
-    const [file, setFile] = useState(null);
+    const [file, setFile] = useState('');
     const [id, setId] = useState(null);
     const [downloadPageLink, setDownloadPageLink] = useState(null);
 
@@ -35,7 +35,7 @@ export default function Home() {
     }
 
     const resetComponent = ()=> {
-        setFile(null);
+        setFile('');
         setDownloadPageLink(null);
     }
 

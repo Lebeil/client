@@ -4,7 +4,7 @@ import axios from "axios";
 
 axios.defaults.baseURL = "process.env.NEXT_PUBLIC_API_ENDPOINT";
 
-function MyApp({Component, pageProps}) {
+function MyApp({Component, pageProps}: {Component: any; pageProps: any}) {
     return (
         <div className="grid h-screen font-serif bg-gray-900 text-white place-content-center">
             <div>
