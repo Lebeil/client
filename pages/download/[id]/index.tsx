@@ -4,6 +4,7 @@ import axios from "axios";
 import {IFile} from "../../../libs/types";
 import RenderFile from "../../../components/RenderFile";
 import fileDownload from 'js-file-download';
+import Image from 'next/image';
 
 
 const index: NextPage<{
@@ -26,7 +27,7 @@ const index: NextPage<{
                 <span>Sorry ! File does not exist, verify the url</span>
             ) : (
                 <>
-                    <img src="/images/download.png" alt="download" className="w-24 h-24"/>
+                    <Image src="/images/download.png" alt="download" className="w-24 h-24"/>
                     <h1 className="text-xl">Your file is ready to download</h1>
                     <RenderFile file={{ format, name, sizeInBytes }}/>
                     <button className="button" onClick={handleDownload}>Download</button>

@@ -1,5 +1,6 @@
 import React, {Dispatch, FunctionComponent, useCallback} from 'react';
 import {useDropzone} from "react-dropzone";
+import Image from 'next/image';
 
 const Dropzone:FunctionComponent<{setFile:Dispatch<any>}> = ({setFile}) => {
     const onDrop = useCallback((acceptedFiles)=> {
@@ -23,7 +24,7 @@ const Dropzone:FunctionComponent<{setFile:Dispatch<any>}> = ({setFile}) => {
                 <div className={`flex flex-col items-center justify-center h-full space-y-3 border-2 border-dashed border-yellow-light rounded-xl
                 ${isDragReject ? 'border-red-500' : ''} + ${isDragAccept ? 'border-green-500' : ''}`}
                     >
-                    <img src="/images/folder.png" alt="folder" className="w-16 h-16"/>
+                    <Image src="/images/folder.png" alt="folder" className="w-16 h-16"/>
                     {isDragReject ? (
                         <p className="text-white">Sorry, only supports images and mp3</p>
                     ) : (
